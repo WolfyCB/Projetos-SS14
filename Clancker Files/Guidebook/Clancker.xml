@@ -1,0 +1,51 @@
+<Document>
+  # Clancker
+  <GuideEntityEmbed Entity="MobClanckerDummy" Caption="Clancker"/>
+  
+	Um Clancker é um robô [bold]quase consciente[/bold] que foi criado centenas de anos atras para trabalhos industriais. Devido sua consciente parecida com as dos humanos, [color=red]eles não seguem as leis da robótica[/color]. Os unicos modelos descobertos até agora são feitos geralmente de cobre e não podem ser hackeados devido ao seu interior feito de engrenagens e molas.
+	Eles são mais robustos, podendo aguentar até [color=blue]2x danos brutos e frio[/color], mas devido sua temperatura elevada ele recebe [color=orange]2x mais dano de queimaduras[/color].
+	
+  <Box>
+    <GuideEntityEmbed Entity="PositronicBrain" Caption="Positronic Brain"/>
+  </Box>
+  
+  ## Reabastecendo um Clancker
+   <Box>
+    <GuideEntityEmbed Entity="FuelTank" Caption="Tanque de Solda"/>
+  </Box>
+  
+	Clanckers funcionam à combustão, então ele usa de combustível de solda para funcionar
+	
+	Pressione [color=yellow]Alt + botão esquerdo[/color] em um combustível de solda para recarregá-lo.
+	
+  ## Rádio Integrado
+  <Box>
+    <GuideEntityEmbed Entity="EncryptionKeyScience" Caption="Encryption key"/>
+  </Box>
+	
+	Clanckers [bolt]não[/bolt] usal rádios externos pois eles já tem um integrado. Eles só precisam pegar uma [color=yellow]encryption key[/color] de um rádio. Clicando em um Clancker com uma [color=yellow]cortador de fios[/color] ou em um rádio com uma [color=yellow]chave de fenda[/color], você pode tirar a encryption key.
+	
+  ## Reparando
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="WelderIndustrialAdvanced" Caption="Soldador"/>
+    
+		Soldadores podem ser usados para reparar dano [color=yellow]Bruto[/color].
+	</Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="CableApcStack" Caption="Cables (any type)"/>
+		
+    Água pode ser usada para reparar dano de [color=yellow]Queimadura[/color]
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    <GuideEntityEmbed Entity="SheetGlass" Caption="Glass Sheets (any type)"/>
+		
+    Vidro pode ser usado para reparar dano de [color=yellow]Cegueira[/color]
+  </Box>
+  <Box HorizontalAlignment="Stretch">
+    
+		Quando um Clancker morre, depois de repara-lo por completo, deve ser reiniciado usando o botão [color=yellow]"Restart"[/color] (entra-se com botão direito)
+		
+		[color=yellow]NUNCA USE UM DESFIBRILADOR NELE, isso só vai resultar em mais dano de choque e se ele estiver abastecido pode ocorrer uma explosão![/color]
+   </Box>
+
+</Document>

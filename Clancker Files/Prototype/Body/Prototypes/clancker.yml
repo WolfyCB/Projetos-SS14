@@ -1,0 +1,45 @@
+- type: body
+  id: Clancker
+  name: "clancker"
+  root: torso
+  slots:
+    head:
+      part: HeadClancker
+      connections:
+      - torso
+      organs:
+        eyes: OrganIPCEyes
+    torso:
+      part: TorsoClancker
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        posbrain: PositronicBrain
+        pump: OrganIPCPump
+    right arm:
+      part: RightArmClancker
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmClancker
+      connections:
+      - left hand
+    right hand:
+      part: RightHandClancker
+    left hand:
+      part: LeftHandClancker
+    right leg:
+      part: RightLegClancker
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegClancker
+      connections:
+      - left foot
+    right foot:
+      part: RightFootClancker
+    left foot:
+      part: LeftFootClancker

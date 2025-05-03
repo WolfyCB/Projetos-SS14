@@ -1,0 +1,21 @@
+espécie space station 14
+
+nome : Clancker
+
+descrição : Um robô com estilo steampunk movido a vapor
+
+energia : ele precisa usar de combustivel de solda para ficar ligado
+
+descarregado : quando descarregado ele emitira sons de maquina, anunciando sua posição de forma que alguem escute e o ajude.
+
+reiniciar : sua reinicialização é parecido com a de um gerador P.A.C.M.A.N, á chances de não ligar de primeira, ou de segunda, ou de terceira, ou de ......
+
+reparos : para reparar danos bruto use um soldador, danos de queimadura use cabos, danos de vizão use vidro
+
+danos : brute, burn, blindness
+
+morte : para revive-lo tera de repará-lo e reabastece-lo se estiver de tanque vazio, e evitar usar um desfibrilador nele pois pode ocorrer uma explosão devido a o combustivel de solda no tanque interno.
+
+características corporais:
+- velocidade : ele é levemente mais lento que um IPC
+- temperatura : é mais quente, por tanto aguenta muito bem o frio mas recebe o dobro de dano de queimaduras

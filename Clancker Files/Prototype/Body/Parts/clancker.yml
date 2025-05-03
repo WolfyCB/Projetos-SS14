@@ -1,0 +1,100 @@
+- type: entity
+  abstract: true
+  parent: BasePartInorganic
+  id: PartClanckerBase
+  name: "partes do corpo do Clancker"
+  components:
+  - type: Sprite
+    sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+  - type: Icon
+    sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+  - type: Destructible # no ashing trigger
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 110
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 150
+      behaviors:
+      - !type:GibPartBehavior { }
+
+- type: entity
+  parent: [ PartClanckerBase, BaseTorsoInorganic ]
+  id: TorsoClancker
+  name: "Clancker torso"
+  components:
+  - type: BodyPart
+    organs:
+      posbrain:
+        id: "posbrain"
+      pump:
+        id: "pump"
+  - type: Destructible # no ashing trigger
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 400
+      behaviors:
+      - !type:GibPartBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Slash
+        damage: 400
+      behaviors:
+      - !type:GibPartBehavior { }
+
+- type: entity
+  parent: [ PartClanckerBase, BaseHead ]
+  id: HeadClancker
+  name: "Cabeça de Clancker"
+  components:
+  - type: BodyPart
+    organs: # posibrain is stored in the torso
+      eyes:
+        id: "eyes"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseLeftArm ]
+  id: LeftArmClancker
+  name: "Braço esquerdo de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseRightArm ]
+  id: RightArmClancker
+  name: "Braço direito de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseLeftHand ]
+  id: LeftHandClancker
+  name: "Mão esquerda de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseRightHand ]
+  id: RightHandClancker
+  name: "Mão direita de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseLeftLeg ]
+  id: LeftLegClancker
+  name: "Perna esquerda de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseRightLeg ]
+  id: RightLegClancker
+  name: "Perna direita de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseLeftFoot ]
+  id: LeftFootClancker
+  name: "Pé esquerdo de Clancker"
+
+- type: entity
+  parent: [ PartClanckerBase, BaseRightFoot ]
+  id: RightFootClancker
+  name: "Pé direito de Clancker"

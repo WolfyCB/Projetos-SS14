@@ -1,0 +1,216 @@
+- type: species
+  id: Clancker
+  name: species-name-clancker
+  roundStart: true
+  prototype: MobClancker
+  sprites: MobClanckerSprites
+  markingLimits: MobClanckerMarkingLimits
+  dollPrototype: MobClanckerDummy
+  skinColoration: Hues
+  minAge: 100
+  maxAge: 500
+  oldAge: 50
+  youngAge: 50
+  maleFirstNames: ClanckerFirst
+  femaleFirstNames: ClanckerFirst
+  lastNames: ClanckerLast
+  naming: FirstDashLast
+  sexes:
+  - Unsexed
+
+
+- type: speciesBaseSprites
+  id: MobClanckerSprites
+  sprites:
+    Head: MobClanckerHead
+    HeadTop: MobHumanoidAnyMarking
+    HeadSide: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    Hair: MobHumanoidMarkingMatchSkin
+    Chest: MobClanckerTorso
+    LArm: MobClanckerLArm
+    RArm: MobClanckerRArm
+    LHand: MobClanckerLHand
+    RHand: MobClanckerRHand
+    LLeg: MobClanckerLLeg
+    RLeg: MobClanckerRLeg
+    LFoot: MobClanckerLFoot
+    RFoot: MobClanckerRFoot
+    Wings: MobHumanoidAnyMarking
+
+- type: markingPoints
+  id: MobClanckerMarkingLimits
+  points:
+    Head:
+      points: 1
+      required: true
+      defaultMarkings: [ MobClanckerHeadDefault ]
+    Chest:
+      points: 1
+      required: true
+      defaultMarkings: [ MobClanckerTorsoDefault ]
+    Legs:
+      points: 4
+      required: true
+      defaultMarkings: [ MobClanckerLLegDefault, MobClanckerLFootDefault, MobClanckerRLegDefault, MobClanckerRFootDefault ]
+    Arms:
+      points: 4
+      required: true
+      defaultMarkings: [ MobClanckerLArmDefault, MobClanckerLHandDefault, MobClanckerRArmDefault, MobClanckerRHandDefault ]
+    HeadSide: 
+      points: 1
+      required: false
+    Wings:
+      points: 1
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobClanckerMarkingFollowSkin
+  markingsMatchSkin: true
+  layerAlpha: 0.5
+
+- type: humanoidBaseSprite
+  id: MobClanckerScreen
+
+# Head
+
+- type: humanoidBaseSprite
+  id: MobClanckerHead
+
+- type: marking
+  id: MobClanckerHeadDefault
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: head
+
+# Torso
+
+- type: humanoidBaseSprite
+  id: MobClanckerTorso
+  
+- type: marking
+  id: MobClanckerTorsoDefault
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: torso
+
+# Left Leg
+
+- type: humanoidBaseSprite
+  id: MobClanckerLLeg
+
+- type: marking
+  id: MobClanckerLLegDefault
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: l_leg
+
+# Left Arm
+
+- type: humanoidBaseSprite
+  id: MobClanckerLArm
+
+- type: marking
+  id: MobClanckerLArmDefault
+  bodyPart: LArm
+  markingCategory: Arms
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: l_arm
+
+#LHand
+
+- type: humanoidBaseSprite
+  id: MobClanckerLHand
+
+- type: marking
+  id: MobClanckerLHandDefault
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: l_hand
+
+#LFoot
+
+- type: humanoidBaseSprite
+  id: MobClanckerLFoot
+
+- type: marking
+  id: MobClanckerLFootDefault
+  bodyPart: LFoot
+  markingCategory: Legs
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: l_foot
+
+#RLeg
+
+- type: humanoidBaseSprite
+  id: MobClanckerRLeg
+
+- type: marking
+  id: MobClanckerRLegDefault
+  bodyPart: RLeg
+  markingCategory: Legs
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: r_leg
+
+#RArm
+
+- type: humanoidBaseSprite
+  id: MobClanckerRArm
+
+- type: marking
+  id: MobClanckerRArmDefault
+  bodyPart: RArm
+  markingCategory: Arms
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: r_arm
+
+#RHand
+
+- type: humanoidBaseSprite
+  id: MobClanckerRHand
+
+- type: marking
+  id: MobClanckerRHandDefault
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: r_hand
+
+#RFoot
+
+- type: humanoidBaseSprite
+  id: MobClanckerRFoot
+
+- type: marking
+  id: MobClanckerRFootDefault
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [Clancker] 
+  sprites:
+  - sprite: _Gabystation/Mobs/Species/Clancker/parts.rsi
+    state: r_foot
+
+- type: Tag
+  id: ClanckerMaskWearable
