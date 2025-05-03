@@ -1,0 +1,37 @@
+- type: body
+  id: MetalSkeletonBody
+  name: Metal Skeleton
+  components:
+  - type: BoneComponent
+    skeletonType: metal
+    bones:
+      head:
+        fractureThreshold: 30
+        damageTransfer: 7
+      torso:
+        fractureThreshold: 30
+        damageTransfer: 7
+      left_arm:
+        fractureThreshold: 25
+        damageTransfer: 6
+      right_arm:
+        fractureThreshold: 25
+        damageTransfer: 6
+      left_hand:
+        fractureThreshold: 20
+        damageTransfer: 5
+      right_hand:
+        fractureThreshold: 20
+        damageTransfer: 5
+      left_leg:
+        fractureThreshold: 25
+        damageTransfer: 6
+      right_leg:
+        fractureThreshold: 25
+        damageTransfer: 6
+      left_foot:
+        fractureThreshold: 20
+        damageTransfer: 5
+      right_foot:
+        fractureThreshold: 20
+        damageTransfer: 5

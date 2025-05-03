@@ -1,0 +1,22 @@
+- type: entity
+  parent: BaseItem
+  id: OrthopedicPlasterItem
+  name: Gesso Ortopédico
+  description: Um gesso especial usado para tratar fraturas ósseas. Deve ser aplicado diretamente na área fraturada.
+  components:
+    - type: Sprite
+      sprite: _GabyStation/Skeleton/Items/orthopedic_plaster.rsi
+      state: icon
+    - type: Item
+      size: Small
+    - type: Clothing
+      slots:
+        - Belt
+    - type: OrthopedicPlasterComponent
+
+- type: latheRecipe
+  id: RecipeOrthopedicPlasterItem
+  result: OrthopedicPlasterItem
+  completetime: 2
+  materials:
+    Plastic: 5

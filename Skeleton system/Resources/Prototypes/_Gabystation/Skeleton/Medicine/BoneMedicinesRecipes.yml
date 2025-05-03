@@ -1,0 +1,43 @@
+- type: reaction
+  id: Epinebone
+  reactants:
+    Potassium:
+      amount: 2
+    Phosphorus:
+      amount: 1
+    Carbon:
+      amount: 1
+  products:
+    Epinebone: 4
+
+- type: reaction
+  id: Bicabone
+  reactants:
+    Epinebone:
+      amount: 1
+    Carbon:
+      amount: 2
+  products:
+    Bicabone: 3
+
+- type: reaction
+  id: Dermabone
+  reactants:
+    Epinebone:
+      amount: 1
+    Oxygen:
+      amount: 1
+    Potassium:
+      amount: 1
+  products:
+    Dermabone: 3
+
+- type: reaction
+  id: Arithbone
+  reactants:
+    Epinebone:
+      amount: 1
+    Radium:
+      amount: 2
+  products:
+    Arithbone: 3

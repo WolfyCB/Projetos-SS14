@@ -1,0 +1,138 @@
+sistema de esqueleto
+
+//esses tem um esqueleto normal
+mobs com esqueleto (por enquanto só para especies humanoids):
+	humano, anão, aracnídeo, diona, resomi, yowie, vox, harpia, felinidio, moth, reptiliano
+//esses tem um esqueleto robótico
+mobs com esqueleto único:
+	IPC, Clancker(em desenvolvimento)
+mobs sem esqueleto:
+	Gingerbread, SlimePerson
+
+//danos que um osso pode receber
+danos:
+	blunt, heat, cold, radiation
+
+
+//como danificar
+se um dano for maior que um certo número vai causar um certo dano menor no osso.
+exemplos: 
+	cabeça:	de 7 para 1
+	torso:	de 7 para 1
+	braços:	de 6 para 1
+	mãos:		de 5 para 1
+	pernas:	de 6 para 1
+	pés:		de 5 para 1
+outra explicação:
+	se a cabeça tiver 7 de blunt vai ter 1 de blunt no crânio do esqueleto, se tiver 21 de blunt na cabeça terá 3 de blunt no crânio
+	1*7 = 7
+	3*7 = 21
+
+
+//quantidade necessaria de dano total para fraturar um osso
+fratura:
+	cabeça:	25
+	torso:	25
+	braços:	20
+	mãos:		15
+	pernas:	20
+	pés:		15
+
+
+como saber se tem algum osso fraturado:
+	o personagem  vai começar a gritar e um popup aparecera dizendo em que parte está sentindo dor
+	exemplo: Você sente uma dor forte em sua cabeça.
+	isso seria o crânio fraturado
+	outro exemplo: Você sente seu braço direito deslocado.
+	isso sria o braço direito fraturado
+
+
+//qualquer osso fraturado vai causar um pouco de blunt
+efeitos quando fraturado:
+	cabeça:	tontura e desmaios repentinos
+	torso:	danos de asfixia repentinos enquanto vivo
+	braços:	ações mais devagar
+	mãos:		incapacidade segurar algo
+	pernas:	incapaz de correr e incapaz de ficar de pé se os dois fraturarem
+	pés:		andar mais lento e incapaz de ficar de pé se os dois fraturarem
+
+
+//os ossos só podem ser curados pelos remédios ou por cirurgia
+remédios:
+	Gesso Ortopédico: //coloque na parte fraturada e lentamente vai curar danos de blunt mas não cura de queimaduras ou radiação
+		efeitos: 		remove 0.1 de blunt
+		
+	epinebone:	//brutos e queimaduras simples
+		receita:
+			2u potássio, 1u fósforo, 1u carbono
+		efeitos: 
+			positivo:	remove 0.5 de blunt e 0.5 de burn a cada 0.5 unidades
+			negativo:	overdose acima de 15 unidades causa 1 de poison
+	
+	bicabone:		//brutos
+		receita:
+			1u epinebone, 2u carbono
+		efeitos: 
+			positivo:	remove 2 de blunt a cada 0.5 unidades
+			negativo:	overdose acima de 10 unidades causa 2 de poison
+	
+	dermabone:	//queimaduras de calor e frio
+		receita:
+			1u epinebone, 1 oxigênio, 1 potássio
+		efeitos: 
+			positivo:	remove 2 de burn a cada 0.5 unidades
+			negativo:	overdose acima de 10 unidades causa 2 de blunt
+	
+	arithbone:	//radiação
+		receita:
+			1u epinebone, 2u radio
+		efeitos: 
+			positivo:	remove 2 de radiação a cada 1 unidades
+			negativo:	overdose acima 10 unidades causa 2 de heat
+
+
+ferramenta:
+	deve-se usar um novo aparelho diferente do PDA e Health Analyzer para ver o esqueleto.
+	visualmente parece um Health Analyzer so que um pouco mais robusto e com o monitor escuro com alguns pixeis brancos representando ossos.
+	mecânicamente é quase igual a um Health Analyzer, a diferença é que mostra os ossos ao inves das partes do corpo.
+	o nome da ferramenta se chama Bone Analyzer.
+
+
+
+arquivos do jogo:
+	Content.Server/_GabyStation/Skeleton:
+		Surgery: //cirurgia
+			- BoneSurgerySystem.cs;
+			- BoneSurgeryComponent.cs;
+		Fracture: //fratura
+			- BoneFractureSystem.cs
+			- BoneFractureComponent.cs
+		HealBones:
+			
+		
+	Content.Shared/_Gabystation/Skeleton:
+		Systems:
+			- BoneHealSystem.cs;
+			- BoneFractureEffectSystem.cs
+		Components:
+			- BoneComponents.cs;
+		
+	Resources:
+		Locale/pt-BR/_GabyStation/Skeleton::
+			- SkeletonMed.ftl
+		ServerInfo/_GabyStation/Skeleton:
+			Guidebook/Medical:
+				- SkeletonMed.xml
+		Prototypes/_GabyStation/Skeleton:
+			Body: //usado para colocar nas entidades que necessitam de esqueleto
+				- skeletonBody.yml //esqueleto normal
+				- metalSkeletonBody.yml //esqueleto robótico
+			Reagents:
+				- BoneMedicines.yml //contem os medicamentos para ossos
+		Audio/_GabyStation/Skeleton:
+			Crack: //audios de ossos quebrando
+				- crack1.ogg
+				- crack2.ogg
+				- crack3.ogg
+				...
+		

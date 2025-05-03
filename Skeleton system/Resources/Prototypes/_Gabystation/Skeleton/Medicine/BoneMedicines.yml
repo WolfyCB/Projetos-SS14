@@ -1,0 +1,82 @@
+- type: reagent
+  id: Epinebone
+  name: Epinebone
+  group: Medicine
+  desc: Um composto que ajuda na regeneração óssea e cura de queimaduras leves.
+  physicalDesc: viscoso
+  color: "FFFFFF"
+  reactiveEffects:
+    overdose:
+      threshold: 15
+      effects:
+        - !type:ModifyHealth
+          amount: -1
+          damageType: Poison
+    normal:
+      effects:
+        - !type:HealBoneDamage
+          amount: 0.5
+          damageType: Blunt
+        - !type:HealBoneDamage
+          amount: 0.5
+          damageType: Burn
+
+- type: reagent
+  id: Bicabone
+  name: Bicabone
+  group: Medicine
+  desc: Um reforço químico avançado para curar fraturas graves.
+  physicalDesc: denso
+  color: "#88DD88"
+  reactiveEffects:
+    overdose:
+      threshold: 10
+      effects:
+        - !type:ModifyHealth
+          amount: -2
+          damageType: Poison
+    normal:
+      effects:
+        - !type:HealBoneDamage
+          amount: 2
+          damageType: Blunt
+
+- type: reagent
+  id: Dermabone
+  name: Dermabone
+  group: Medicine
+  desc: Tratamento especializado para ossos queimados.
+  physicalDesc: pegajoso
+  color: "#FF8888"
+  reactiveEffects:
+    overdose:
+      threshold: 10
+      effects:
+        - !type:ModifyHealth
+          amount: -2
+          damageType: Blunt
+    normal:
+      effects:
+        - !type:HealBoneDamage
+          amount: 2
+          damageType: Burn
+
+- type: reagent
+  id: Arithbone
+  name: Arithbone
+  group: Medicine
+  desc: Agente curativo contra ossos irradiados.
+  physicalDesc: brilhante
+  color: "#88FFFF"
+  reactiveEffects:
+    overdose:
+      threshold: 10
+      effects:
+        - !type:ModifyHealth
+          amount: -2
+          damageType: Heat
+    normal:
+      effects:
+        - !type:HealBoneDamage
+          amount: 2
+          damageType: Radiation
